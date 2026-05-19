@@ -3,7 +3,7 @@
 
 patch:
   # ── 皮肤配色 ──
-  style/color_scheme: purity_of_form_custom
+  style/color_scheme: apple_dark
   preset_color_schemes/purity_of_form_custom:
     name: "純粹的形式／Purity of Form Custom"
     author: 雨過之後、佛振
@@ -20,6 +20,23 @@ patch:
     hilited_candidate_border_color: 0xE3E3E3
     hilited_candidate_label_color: 0x4C4C4C
     hilited_candidate_text_color: 0x000000
+
+  apple_dark:
+    name: "蘋果暗黑／Apple Dark"
+    author: 社区
+    text_color: 0xCCCCCC
+    back_color: 0x2D2D2D
+    border_color: 0x3D3D3D
+    label_color: 0x999999
+    comment_text_color: 0x808080
+    candidate_text_color: 0xFFFFFF
+    hilited_text_color: 0xFFFFFF
+    hilited_back_color: 0x2D2D2D
+    hilited_candidate_text_color: 0xFFFFFF
+    hilited_candidate_back_color: 0x0A84FF
+    hilited_candidate_label_color: 0xFFFFFF
+    hilited_comment_text_color: 0xAAAAAA
+    shadow_color: 0x00000000
 
   # ── 字体 ──
   style/font_face: "Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:30:39, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, Segoe UI, Microsoft YaHei, DengXian, Segoe UI Emoji, Noto Color Emoji, Segoe UI Symbol"
