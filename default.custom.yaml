@@ -22,3 +22,8 @@ patch:
       - emoji
       - full_shape
       - search_single_char
+
+  # 按键：Tab 选词，方向键切音节
+  key_binder/bindings/@1: { when: has_menu, accept: Tab, send: Return }
+  navigator/bindings/Left: left_by_syllable
+  navigator/bindings/Right: right_by_syllable
