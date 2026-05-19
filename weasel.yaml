@@ -144,18 +144,18 @@ preset_color_schemes:
     author: sakuradairong
     text_color: 0xF5F5F7
     back_color: 0x1C1C1E
-    border_color: 0x3A3A3C
+    border_color: 0x2C2C2E
     label_color: 0x8E8E93
     comment_text_color: 0x8E8E93
     candidate_text_color: 0xF5F5F7
-    hilited_text_color: 0xF5F5F7
-    hilited_back_color: 0x1C1C1E
+    hilited_text_color: 0xFFFFFF
+    hilited_back_color: 0x2C2C2E
     hilited_candidate_text_color: 0xFFFFFF
-    hilited_candidate_back_color: 0x0A84FF
-    hilited_candidate_border_color: 0x0A84FF
+    hilited_candidate_back_color: 0xD75A00
+    hilited_candidate_border_color: 0xD75A00
     hilited_candidate_label_color: 0xFFFFFF
-    hilited_comment_text_color: 0xBFBFBF
-    shadow_color: 0x40000000
+    hilited_comment_text_color: 0x98989D
+    shadow_color: 0x28000000
 
   mac_dark:
     name: "深邃暗黑／Mac Dark"
