@@ -76,3 +76,27 @@ make -C others/script/ lint
 - `squirrel.yaml`：鼠须管前端配置。
 - `default.yaml`：全局默认配置，控制启用方案和通用行为。
 - `custom_phrase.txt`：全拼自定义短语。
+## 个人定制指南
+
+本仓库是 `iDvel/rime-ice` 的 fork，`origin` 指向个人仓库，`upstream` 指向雾凇拼音上游。
+
+### 定制原则
+- **用打补丁方式，不要直接改原文件。** 创建 `*.custom.yaml` 文件来覆盖默认配置。这样 `git pull upstream main` 同步上游更新时不会有冲突。
+- 常用补丁文件：
+  - `default.custom.yaml` — 覆盖全局默认配置（候选数、快捷键、标点符号等）
+  - `weasel.custom.yaml` — 覆盖小狼毫前端配置（皮肤、字体、布局等）
+  - `rime_ice.custom.yaml` — 覆盖雾凇拼音方案配置（模糊音、纠错等）
+  - `double_pinyin_flypy.custom.yaml` — 覆盖特定双拼方案配置
+- 自定义短语直接编辑 `custom_phrase.txt`（此文件不会被上游覆盖）。
+
+### 同步上游
+```bash
+git pull upstream main
+```
+
+### 提交个人修改
+```bash
+git add -A
+git commit -m "config: 描述你的修改"
+git push origin main
+```
