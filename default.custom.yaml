@@ -9,7 +9,7 @@ patch:
     good_old_caps_lock: true
     switch_key: {Caps_Lock: clear, Control_L: noop, Control_R: noop, Shift_L: clear, Shift_R: clear}
   menu:
-    page_size: 8
+    page_size: 5
   schema_list:
     - {schema: rime_ice}
 
