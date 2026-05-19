@@ -13,11 +13,12 @@ patch:
   schema_list:
     - {schema: rime_ice}
 
-  # 开关记忆 — F4 菜单里切换的选项会被记住，下次开机不丢失
+  # 方案选单 — F4 弹出菜单
   switcher:
+    fold_options: false       # 单方案展开，否则 F4 看不到
     save_options:
-      - ascii_punct         # 中英标点
-      - traditionalization  # 简繁转换
-      - emoji               # Emoji
-      - full_shape          # 全半角
-      - search_single_char  # 以字搜字
+      - ascii_punct
+      - traditionalization
+      - emoji
+      - full_shape
+      - search_single_char
