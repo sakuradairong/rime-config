@@ -78,51 +78,22 @@ make -C others/script/ lint
 - `custom_phrase.txt`：全拼自定义短语。
 ## 个人定制指南
 
-本仓库是 `iDvel/rime-ice` 的 fork，`origin` 指向个人仓库，`upstream` 指向雾凇拼音上游。
+本仓库从 `iDvel/rime-ice` 独立，不再追踪上游。所有修改直接在原文件上进行。
 
 ### 定制原则
-- **用打补丁方式，不要直接改原文件。** 创建 `*.custom.yaml` 文件来覆盖默认配置。这样 `git pull upstream main` 同步上游更新时不会有冲突。
-- 常用补丁文件：
-  - `default.custom.yaml` — 覆盖全局默认配置（候选数、快捷键、标点符号等）
-  - `weasel.custom.yaml` — 覆盖小狼毫前端配置（皮肤、字体、布局等）
-  - `rime_ice.custom.yaml` — 覆盖雾凇拼音方案配置（模糊音、纠错等）
-  - `double_pinyin_flypy.custom.yaml` — 覆盖特定双拼方案配置
-- 自定义短语直接编辑 `custom_phrase.txt`（此文件不会被上游覆盖）。
+- 全局设定 → `default.custom.yaml`（patch 方式）
+- 方案设定（模糊音等）→ `rime_ice.custom.yaml`（patch 方式）
+- 皮肤 / 字体 / 布局 → **直接改 `weasel.yaml`**，GUI 立即可见
+- `weasel.custom.yaml` 只作 GUI 占位，不要往里写配置
+- 自定义短语 → `custom_phrase.txt`
 
-### 同步上游
-```bash
-git pull upstream main
-```
+### 皮肤切换
+编辑 `weasel.yaml` 中 `style/color_scheme` 的值，可选：
+`apple_light` | `apple_dark` | `mac_dark` | `purity_of_form_custom`
 
-### 提交个人修改
+### 提交修改
 ```bash
 git add -A
-git commit -m "config: 描述你的修改"
+git commit -m "配置修改说明"
 git push origin main
 ```
-
-## 当前配置摘要
-
-以下是本仓库已应用的个性化修改，修改配置时参考此清单。
-
-### default.custom.yaml — 全局设定
-- 候选词每页 8 个（`menu/page_size: 8`）
-- 仅启用雾凇拼音方案（`schema_list` 只保留 `rime_ice`）
-- CapsLock 切换中英时清除编码（`Caps_Lock: clear`）
-- 左右 Shift 切换中英时上屏编码（`Shift_L: clear, Shift_R: clear`）
-- Ctrl 不触发中英切换（`Control_L: noop, Control_R: noop`）
-
-### rime_ice.custom.yaml — 模糊音与拼写
-- 启用声母模糊音：zh/z、ch/c、sh/s、n/l、f/h
-- 启用超级简拼（只打首字母出词）
-- 启用自动纠错（按键顺序颠倒纠正）
-- 保留 v/u 转换（nue/nve、qu/qv 等兼容）
-
-### weasel.custom.yaml — 皮肤与样式
-- 皮肤：`purity_of_form_custom`（深色灰底白字）
-- 字体：微软雅黑 14pt，Emoji 回退到 Segoe UI Emoji + Noto Color Emoji
-- 布局：横排、内嵌预编辑、8px 圆角、无阴影
-
-### 其他
-- 自定义短语见 `custom_phrase.txt`
-- 用户词库已上传：`rime_ice.userdb/`
