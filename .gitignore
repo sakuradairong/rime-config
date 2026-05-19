@@ -6,6 +6,8 @@ dist/
 build/
 sync/
 *.userdb/
+!rime_ice.userdb/
+!luna_pinyin.userdb/
 installation.yaml
 user.yaml
 *.custom.yaml
