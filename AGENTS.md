@@ -100,3 +100,29 @@ git add -A
 git commit -m "config: 描述你的修改"
 git push origin main
 ```
+
+## 当前配置摘要
+
+以下是本仓库已应用的个性化修改，修改配置时参考此清单。
+
+### default.custom.yaml — 全局设定
+- 候选词每页 8 个（`menu/page_size: 8`）
+- 仅启用雾凇拼音方案（`schema_list` 只保留 `rime_ice`）
+- CapsLock 切换中英时清除编码（`Caps_Lock: clear`）
+- 左右 Shift 切换中英时上屏编码（`Shift_L: clear, Shift_R: clear`）
+- Ctrl 不触发中英切换（`Control_L: noop, Control_R: noop`）
+
+### rime_ice.custom.yaml — 模糊音与拼写
+- 启用声母模糊音：zh/z、ch/c、sh/s、n/l、f/h
+- 启用超级简拼（只打首字母出词）
+- 启用自动纠错（按键顺序颠倒纠正）
+- 保留 v/u 转换（nue/nve、qu/qv 等兼容）
+
+### weasel.custom.yaml — 皮肤与样式
+- 皮肤：`purity_of_form_custom`（深色灰底白字）
+- 字体：微软雅黑 14pt，Emoji 回退到 Segoe UI Emoji + Noto Color Emoji
+- 布局：横排、内嵌预编辑、8px 圆角、无阴影
+
+### 其他
+- 自定义短语见 `custom_phrase.txt`
+- 用户词库已上传：`rime_ice.userdb/`
