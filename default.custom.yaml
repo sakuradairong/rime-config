@@ -12,3 +12,12 @@ patch:
     page_size: 8
   schema_list:
     - {schema: rime_ice}
+
+  # 开关记忆 — F4 菜单里切换的选项会被记住，下次开机不丢失
+  switcher:
+    save_options:
+      - ascii_punct         # 中英标点
+      - traditionalization  # 简繁转换
+      - emoji               # Emoji
+      - full_shape          # 全半角
+      - search_single_char  # 以字搜字
