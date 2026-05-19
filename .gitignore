@@ -11,6 +11,8 @@ user.yaml
 *.custom.yaml
 !others/**/*.custom.yaml
 !weasel.custom.yaml
+!default.custom.yaml
+!rime_ice.custom.yaml
 
 custom_phrase_double.txt
 others/script/scel2txt/out/*
